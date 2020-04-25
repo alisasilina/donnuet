@@ -1,0 +1,21 @@
+.btn-outline-green {
+  color: $basic-green;
+  border-color: $basic-green;
+  transition: all 0.3s ease-out;
+  &:hover {
+    background: $basic-green;
+    color: white;
+  }
+}
+
+.btn-green {
+  color: white;
+  background: $basic-green;
+  border-color: $basic-green;
+  transition: all 0.3s ease-out;
+  &:hover {
+    background: $hover-green;
+    border-color: $hover-green;
+    color: white;
+  }
+}

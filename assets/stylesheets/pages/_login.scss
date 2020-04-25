@@ -1,0 +1,93 @@
+.login-container {
+  width: 100%;
+  height: 100vh;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  color: #999;
+  background: $grey-00;
+}
+
+.form-control {
+  box-shadow: none;
+  border-color: #ddd;
+  &:focus {
+    border-color: $basic-green;
+  }
+}
+
+.login-form {
+  margin: 0 auto;
+  width: 350px;
+  padding: 30px 0;
+
+  form {
+    color: $grey-04;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 30px;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    color: #fff;
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 10;
+    background: $basic-green;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    i {
+      line-height: 62px;
+      font-size: 50px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    background: $basic-green;
+    border: none;
+    line-height: normal;
+    transition: all 0.3s ease-out;
+    &:hover, &:focus {
+      background: $hover-green;
+    }
+  }
+  input[type="checkbox"] {
+      margin-top: 2px 6px 0 6px;
+  }
+}
+
+  .input-wrapper{
+    position: relative;
+  }
+  .email-input {
+    padding-left: 2.5rem;
+  }
+  .input-icon {
+    position: absolute;
+    left: 1rem;
+    top: calc(50% - 0.5em);
+  }
+
+  .checkbox-inline {
+    align-items: center;
+    display: flex;
+
+    input[type='checkbox'] {
+      margin: 0 6px;
+    }
+}
