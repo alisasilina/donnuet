@@ -19,3 +19,11 @@
     color: white;
   }
 }
+
+.btn-outline-secondary {
+  &:hover {
+    background: transparent;
+    color: black;
+    border-color: black
+  }
+}

@@ -38,11 +38,56 @@ h1, h2, h3 {
     border-color: #31c45f;
     color: white; }
 
+.btn-outline-secondary:hover {
+  background: transparent;
+  color: black;
+  border-color: black; }
+
 .modal-dialog {
   margin: auto;
   height: 100vh;
   align-items: center;
   display: flex; }
+
+.modal-title {
+  font-weight: 600; }
+
+.modal-body {
+  margin: 0 1rem; }
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end; }
+  .star-rating input {
+    border: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    opacity: 0; }
+  .star-rating label {
+    position: relative;
+    color: #C8C8C8; }
+    .star-rating label:before {
+      margin: 2px;
+      content: "\f005";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      display: inline-block;
+      font-size: 1.2em;
+      color: #ccc;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none; }
+  .star-rating input:checked ~ label:before {
+    color: #f5ca31; }
+  .star-rating label:hover ~ label:before {
+    color: #f5ca31; }
+  .star-rating label:hover:before {
+    color: #f5ca31; }
 
 .login-container {
   width: 100%;
@@ -127,8 +172,11 @@ p {
 header {
   display: flex; }
   header img {
-    padding: 0.5rem 0;
-    width: 100%; }
+    padding-top: 0.5rem;
+    height: 60px;
+    max-width: 100% !important;
+    margin: auto;
+    object-fit: contain; }
   header h1 {
     font-weight: 600; }
 
@@ -147,10 +195,14 @@ header {
     .teachers__list {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      align-items: start;
       grid-column-gap: 1rem; } }
+  @media (min-width: 900px) {
+    .teachers__list {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
 .teacher {
-  height: 20rem;
+  height: 22rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,13 +217,23 @@ header {
     height: 4rem;
     margin-bottom: 0.8rem;
     opacity: 0.9; }
-  .teacher h3 {
-    text-align: center; }
-    .teacher h3 span {
-      display: block; }
   @media (min-width: 600px) {
     .teacher {
       margin: 1rem 0 0; } }
+  @media (min-width: 900px) {
+    .teacher {
+      height: 24rem; } }
+
+.teacher__name {
+  text-align: center;
+  font-size: 1.5rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.5rem 0; }
+  .teacher__name span {
+    display: block; }
 
 .study {
   font-size: 18px;
@@ -191,5 +253,48 @@ header {
 
 .unvoted .stars {
   color: #c6c6ca; }
+
+.results .teacher {
+  height: fit-content;
+  padding: 0; }
+.results .teacher__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem; }
+  .results .teacher__info p {
+    text-align: center; }
+.results .votes__number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5BA342; }
+.results .unvoted .votes__number {
+  color: #7d7d7d; }
+.results .teacher__details {
+  width: 100%; }
+.results .details__title {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  padding: 0.3rem 0;
+  margin: 0; }
+  .results .details__title i {
+    margin-left: 0.5rem;
+    line-height: 1.1rem; }
+.results .unvoted .details__title {
+  background: #c6c6ca; }
+.results .voted .details__title {
+  cursor: pointer;
+  background: #5BA342; }
+.results .details__list {
+  padding: 1rem 0 0 2rem; }
+  .results .details__list li span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5BA342; }
 
 /*# sourceMappingURL=style.css.map */

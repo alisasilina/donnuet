@@ -1,6 +1,15 @@
 {
+  "name": "donnuet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:alisasilina/donnuet.git",
+  "author": "Alisa Silina <alisasilina@gmail.com>",
+  "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "jquery": "^3.5.0",
-    "jquery-bar-rating": "^1.2.2"
+    "jquery-bar-rating": "^1.2.2",
+    "rateyo": "^2.3.5",
+    "starrr": "^2.0.4"
   }
 }

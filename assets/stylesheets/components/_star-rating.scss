@@ -1,0 +1,44 @@
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  input {
+    border: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    opacity: 0;
+  }
+
+  label {
+    position: relative;
+    color: #C8C8C8;
+    &:before {
+      margin: 2px;
+      content: "\f005";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      display: inline-block;
+      font-size: 1.2em;
+      color: #ccc;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+  }
+
+  input:checked ~ label:before {
+    color: $gold;
+  }
+
+  label:hover ~ label:before {
+    color: $gold;
+  }
+
+  label:hover:before {
+    color: $gold;
+  }
+}

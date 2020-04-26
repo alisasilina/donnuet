@@ -1,0 +1,72 @@
+.results {
+  .teacher {
+    height: fit-content;
+    padding: 0;
+  }
+
+  .teacher__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+    p {
+      text-align: center;
+    }
+  }
+
+  .votes__number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $basic-green;
+  }
+
+  .unvoted {
+    .votes__number{
+      color: $grey-03;
+    }
+  }
+
+  .teacher__details {
+    width: 100%;
+  }
+
+  .details__title {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    padding: 0.3rem 0;
+    margin: 0;
+    i {
+      margin-left: 0.5rem;
+      line-height: 1.1rem;
+    }
+  }
+
+  .unvoted {
+    .details__title {
+      background: $grey-02;
+    }
+  }
+
+  .voted {
+    .details__title {
+      cursor: pointer;
+      background: $basic-green;
+    }
+  }
+
+  .details__list {
+    padding: 1rem 0 0 2rem;
+    li {
+      span {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $basic-green;
+      }
+    }
+  }
+}

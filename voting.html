@@ -23,6 +23,7 @@
       <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
       <link rel="stylesheet" href="assets/stylesheets/style.css">
   </head>
   <body>
@@ -35,7 +36,9 @@
       <div class='teachers__list'>
         <div class='teacher voted'>
           <img src="assets/images/teacher-icon.png" alt="teacher icon">
-          <h3>Иванов <span>Дмитрий Петрович</span></h3>
+          <div class='teacher__name'>
+            <h3>Иванов <span>Дмитрий Петрович</span></h3>
+          </div>
           <h5 class='study'>география</h5>
           <div class='stars'>
             <i class="fas fa-star"></i>
@@ -49,13 +52,15 @@
 
         <div class='teacher voted'>
           <img src="assets/images/teacher-icon.png" alt="teacher icon">
-          <h3>Иванов <span>Дмитрий Петрович</span></h3>
-          <h5 class='study'>география</h5>
+          <div class='teacher__name'>
+            <h3>Сергеев <span>Олег Викторович</span></h3>
+          </div>
+          <h5 class='study'>история</h5>
           <div class='stars'>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+            <i class="fas fa-star"></i>
             <i class="far fa-star"></i>
           </div>
           <p class='voting-status'>Вы уже проголосовали</p>
@@ -63,12 +68,14 @@
 
         <div class='teacher voted'>
           <img src="assets/images/teacher-icon.png" alt="teacher icon">
-          <h3>Иванов <span>Дмитрий Петрович</span></h3>
-          <h5 class='study'>география</h5>
+          <div class='teacher__name'>
+            <h3>Сидорова <span>Мария Анатольевна</span></h3>
+          </div>
+          <h5 class='study'>биология</h5>
           <div class='stars'>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
             <i class="far fa-star"></i>
             <i class="far fa-star"></i>
           </div>
@@ -77,7 +84,9 @@
 
         <div class='teacher unvoted'>
           <img src="assets/images/teacher-icon.png" alt="teacher icon">
+          <div class='teacher__name'>
           <h3>Смирнов <span>Иван Иванович</span></h3>
+          </div>
           <h5 class='study'>экономика</h5>
           <div class='stars'>
             <i class="fas fa-star"></i>
@@ -103,17 +112,34 @@
                 </div>
                 <div class="modal-body">
                   <ol>
-                    <li id='q1'>Вопрос номер один</li>
-                    <div class="br-wrapper br-theme-fontawesome-stars">
-                      <select id="rating_div"> <!-- now hidden -->
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                      </select>
+                    <li>Вопрос номер один</li>
+                    <div class='star-rating'>
+                      <input type="checkbox" id="st1" value="1" />
+                      <label for="st1"></label>
+                      <input type="checkbox" id="st2" value="2" />
+                      <label for="st2"></label>
+                      <input type="checkbox" id="st3" value="3" />
+                      <label for="st3"></label>
+                      <input type="checkbox" id="st4" value="4" />
+                      <label for="st4"></label>
+                      <input type="checkbox" id="st5" value="5" />
+                      <label for="st5"></label>
                     </div>
                     <li>Вопрос номер два</li>
+                    <div class='star-rating'>
+                      <input type="checkbox" id="st1" value="1" />
+                      <label for="st1"></label>
+                      <input type="checkbox" id="st2" value="2" />
+                      <label for="st2"></label>
+                      <input type="checkbox" id="st3" value="3" />
+                      <label for="st3"></label>
+                      <input type="checkbox" id="st4" value="4" />
+                      <label for="st4"></label>
+                      <input type="checkbox" id="st5" value="5" />
+                      <label for="st5"></label>
+                    </div>
+                    <li>Вопрос номер три</li>
+                    <div id='example'>
                     <select>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -121,8 +147,7 @@
                       <option value="4">4</option>
                       <option value="5">5</option>
                     </select>
-                    <li>Вопрос номер три</li>
-                    <li>...</li>
+                    </div>
                   </ol>
                 </div>
                 <div class="modal-footer">
@@ -137,10 +162,21 @@
     </section>
 
     <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/010f2c19e5.js"></script>
-    <script type="nomodule" src="assets/javascript/plugins/star_rating.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="jquery.barrating.min.js"></script>
+    <script type="text/javascript">
+       $(function() {
+          $('#example').barrating({
+            theme: 'fontawesome-stars'
+          });
+       });
+    </script>
+
   </body>
 </html>

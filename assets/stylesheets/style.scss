@@ -1,3 +1,6 @@
+// @import "jquery-bar-rating/dist/themes/css-stars";
+// @import "@fortawesome/fontawesome-free/css/all.min.css";
+
 @import 'config/reset';
 @import 'config/colors';
 @import 'config/fonts';
@@ -6,7 +9,8 @@
 @import 'components/buttons';
 @import 'components/forms';
 @import 'components/modal';
+@import 'components/star-rating';
 
 @import 'pages/login';
 @import 'pages/voting';
-// @import 'pages/results';
+@import 'pages/results';

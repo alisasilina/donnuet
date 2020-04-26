@@ -3,8 +3,8 @@ import $ from 'jquery';
 
 const starRating = () => {
   $('#rating_div').barrating({
-    theme: 'fontawesome-stars'
+    theme: 'css-stars'
   });
 }
 
-starRating();
+export { starRating };
