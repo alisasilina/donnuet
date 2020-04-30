@@ -9,7 +9,9 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "jquery": "^3.5.0",
     "jquery-bar-rating": "^1.2.2",
-    "rateyo": "^2.3.5",
-    "starrr": "^2.0.4"
+    "livereload": "^0.9.1"
+  },
+  "scripts": {
+    "start": "sass --watch assets/stylesheets/style.scss:assets/stylesheets/style.css"
   }
 }
