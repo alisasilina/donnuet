@@ -1,0 +1,62 @@
+/*Stars*/
+$star-default: #d2d2d2;
+
+.br-theme-fontawesome-stars {
+
+  .br-widget {
+    height: 28px;
+    white-space: nowrap;
+
+    a {
+      font: normal normal normal 20px/1 'Font Awesome 5 Free';
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      text-decoration: none;
+      margin-right: 2px;
+    }
+
+    a:after {
+      content: '\f005';
+      font-weight: 600;
+      color: $star-default;
+    }
+
+    a.br-active:after {
+      color: $gold;
+    }
+
+    a.br-selected:after {
+      color: $gold;
+    }
+
+    .br-current-rating {
+      display: none;
+    }
+  }
+
+  .br-readonly {
+    a {
+      cursor: default;
+    }
+  }
+
+}
+
+@media print {
+  .br-theme-fontawesome-stars {
+
+    .br-widget {
+      a:after {
+        content: '\f006';
+        color: black;
+      }
+
+      a.br-active:after,
+      a.br-selected:after {
+        content: '\f005';
+        color: black;
+      }
+    }
+
+  }
+}
