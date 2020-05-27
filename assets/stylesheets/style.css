@@ -76,7 +76,7 @@ h1, h2, h3 {
 
 .modal-dialog {
   margin: auto;
-  height: 100vh;
+  height: 140vh;
   align-items: center;
   display: flex; }
 
@@ -84,7 +84,8 @@ h1, h2, h3 {
   font-weight: 600; }
 
 .modal-body {
-  margin: 0 1rem; }
+  margin: 0 1rem; 
+  font-size: 10px;}
 
 .login-container {
   width: 100%;

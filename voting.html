@@ -1,173 +1,116 @@
-<!DOCTYPE HTML>
-<html lang = "en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163646831-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-163646831-1"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
 
       gtag('config', 'UA-163646831-1');
     </script>
 
-      <title>Голосование | Донецький національний університет економіки і торгівлі імені Михайла Туган-Барановського (ДонНУЕТ)</title>
+    <title>
+      Голосування | Донецький національний університет економіки і торгівлі
+      імені Михайла Туган-Барановського (ДонНУЕТ)
+    </title>
 
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-      <meta name="description" content="Alisa Silina - Web Developer - CV and Portfolio Website">
-      <link rel="shortcut icon" href="assets/images/icon.png" type="image/png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Alisa Silina - Web Developer - CV and Portfolio Website"
+    />
+    <link rel="shortcut icon" href="assets/images/icon.png" type="image/png" />
 
-      <!-- Stylesheets -->
-      <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- Stylesheets -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+    />
 
-      <link rel="stylesheet" href="assets/stylesheets/style.css">
+    <link rel="stylesheet" href="assets/stylesheets/style.css" />
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" alt="logo">
+      <img src="assets/images/logo.png" alt="logo" />
     </header>
 
-    <section class='teachers'>
+    <section class="teachers">
       <h1>Голосование</h1>
-      <div class='teachers__list'>
-        <div class='teacher voted'>
-          <img src="assets/images/teacher-icon.png" alt="teacher icon">
-          <div class='teacher__name'>
+      <div class="teachers__list">
+        <!-- <div class="teacher voted">
+          <img src="assets/images/teacher-icon.png" alt="teacher icon" />
+          <div class="teacher__name">
             <h3>Иванов <span>Дмитрий Петрович</span></h3>
           </div>
-          <h5 class='study'>география</h5>
-          <div class='stars'>
+          <h5 class="study">география</h5>
+          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="far fa-star"></i>
             <i class="far fa-star"></i>
           </div>
-          <p class='voting-status'>Вы уже проголосовали</p>
-        </div>
+          <p class="voting-status">Вы уже проголосовали</p>
+        </div> -->
 
-        <div class='teacher voted'>
-          <img src="assets/images/teacher-icon.png" alt="teacher icon">
-          <div class='teacher__name'>
-            <h3>Сергеев <span>Олег Викторович</span></h3>
-          </div>
-          <h5 class='study'>история</h5>
-          <div class='stars'>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-          </div>
-          <p class='voting-status'>Вы уже проголосовали</p>
-        </div>
-
-        <div class='teacher voted'>
-          <img src="assets/images/teacher-icon.png" alt="teacher icon">
-          <div class='teacher__name'>
-            <h3>Сидорова <span>Мария Анатольевна</span></h3>
-          </div>
-          <h5 class='study'>биология</h5>
-          <div class='stars'>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-          </div>
-          <p class='voting-status'>Вы уже проголосовали</p>
-        </div>
-
-        <div class='teacher unvoted'>
-          <img src="assets/images/teacher-icon.png" alt="teacher icon">
-          <div class='teacher__name'>
-          <h3>Смирнов <span>Иван Иванович</span></h3>
-          </div>
-          <h5 class='study'>экономика</h5>
-          <div class='stars'>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <!-- Button trigger votting modal -->
-          <button type="button" class="btn btn-outline-green" data-toggle="modal" data-target="#exampleModal">
-            Проголосовать!
-          </button>
-
-          <!-- Modal with voting questions -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Голосование</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <ol>
-                    <li>Вопрос номер один</li>
-                      <select id="q1">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                      </select>
-
-                    <li>Вопрос номер два</li>
-                      <select id="q2">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                      </select>
-
-                    <li>Вопрос номер три</li>
-                      <select id="q3">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                      </select>
-                  </ol>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отмена</button>
-                  <button type="button" class="btn btn-green">Проголосовать</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        REPLACEME
 
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://kit.fontawesome.com/010f2c19e5.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js.map"></script>
     <script type="text/javascript">
-      $(function() {
-          $('#q1, #q2, #q3').barrating({
-            theme: 'fontawesome-stars',
-            initialRating: 0.1
-          });
+      $(function () {
+        $('#q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10').barrating({
+          theme: 'fontawesome-stars',
+          initialRating: 0.1,
+        });
       });
     </script>
-
+    <script type="text/javascript">
+      submitForms = function(){
+        const forms = document.querySelectorAll('form');
+        [...forms].map((form => form.submit()))
+      }
+    </script>
   </body>
 </html>

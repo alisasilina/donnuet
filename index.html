@@ -30,17 +30,17 @@
     </header>
     <div class="login-container">
       <div class="login-form">
-          <form action="/examples/actions/confirmation.php" method="post">
+          <form action="/login">
             <div class="avatar"><i class="fas fa-user"></i></div>
-            <h4 class="modal-title">Вход в аккаунт</h4>
+            <h4 class="modal-title">Вхід до акаунту</h4>
             <div class="form-group">
               <div class="input-wrapper">
-                <input type="email" id='email' class="form-control email-input" placeholder="Email" required="required">
+                <input type="text" id="email" name="email" class="form-control email-input" placeholder="Email" required="required">
                 <label for="email" class="fa fa-envelope input-icon"></label>
               </div>
             </div>
             <div class="form-group small clearfix right">
-              <label class="checkbox-inline"><input type="checkbox">Запомнить меня</label>
+              <label class="checkbox-inline"><input type="checkbox">Запам'ятати мене</label>
             </div>
             <input type="submit" class="btn btn-primary btn-block btn-lg" value="Войти">
           </form>
