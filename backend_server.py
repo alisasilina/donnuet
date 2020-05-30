@@ -26,7 +26,7 @@ BIGSTR = """
             type="button"
             class="btn btn-outline-green"
             data-toggle="modal"
-            data-target="#modal"
+            data-target="#modal{i}"
           >
             Голосувати!
           </button>
@@ -34,7 +34,7 @@ BIGSTR = """
           <!-- Modal with voting questions -->
           <div
             class="modal fade"
-            id="modal"
+            id="modal{i}"
             tabindex="-1"
             role="dialog"
             aria-labelledby="modalLabel"
@@ -222,11 +222,13 @@ def handle_voting(login):
   group = groups_collection.find_one({"group_id" : group_id })
   n = ""
   b = False
-  for i in range(len(group['list_of_teachers'])):
+
+  if group:
+    for i in range(len(group['list_of_teachers'])):
       name = group['list_of_teachers'][i][0]
       subject = group['list_of_teachers'][i][1]
       if name not in result["voted_to"]:
-        n+=BIGSTR.format(name=name, subject=subject, login=login)
+        n+=BIGSTR.format(name=name, subject=subject, login=login, i=i)
 
   if n == "":
     n = SPAN
@@ -255,7 +257,7 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
                 return
 
         if '/Vjzpfz1989' in self.path:
-          collection = db ['teachers']
+          collection = db [' teachers']
           teachers = collection.find()
           n = ""
 
@@ -332,7 +334,7 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
             content_length = int(self.headers['Content-Length'])
             body = self.rfile.read(content_length)
             fields = parse.parse_qs(body.decode('utf-8')) if body else {}
-            collection = db['teachers']
+            collection = db[' teachers']
             q1 = None
             q2 = None
             q3 = None
@@ -360,6 +362,8 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
                 print("***", t_name)
         # TODO - get the teacher name from fields
                 teacher = collection.find_one({"name" : t_name})
+                print("***", teacher)
+
                 sum_q1 = teacher['sum_q1'] + q1
                 sum_q2 = teacher['sum_q2'] + q2
                 sum_q3 = teacher['sum_q3'] + q3
