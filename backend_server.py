@@ -4,6 +4,8 @@ from urllib import request, parse
 
 import pymongo
 import pprint
+import sys
+import time
 
 client = pymongo.MongoClient('localhost', 27017)
 db = client['NUET-questionnaire']
@@ -227,6 +229,10 @@ def handle_voting(login):
     for i in range(len(group['list_of_teachers'])):
       name = group['list_of_teachers'][i][0]
       subject = group['list_of_teachers'][i][1]
+      # TODO - fix one vote per teacher
+      #key = name + ":" + subject
+      #if name not in result["voted_to"]:
+
       if name not in result["voted_to"]:
         n+=BIGSTR.format(name=name, subject=subject, login=login, i=i)
 
@@ -359,10 +365,9 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
                 q9 = int(fields.get('q9')[0])
                 q10 = int(fields.get('q10')[0])
                 t_name = str(fields.get('teacher_name')[0])
-                print("***", t_name)
         # TODO - get the teacher name from fields
+        # TODO - send the subject also
                 teacher = collection.find_one({"name" : t_name})
-                print("***", teacher)
 
                 sum_q1 = teacher['sum_q1'] + q1
                 sum_q2 = teacher['sum_q2'] + q2
@@ -402,8 +407,7 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
 
             elif 'email' in fields:
               login = fields["email"][0]
-            else:
-              print("BUGGG")
+
             students_collection = db['students']
             #result = students_collection.find_one({"e-mail" : login})
             students_collection.update_one({"e-mail" : login}, {"$push": {"voted_to": t_name}})
@@ -418,7 +422,6 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
           #f_index = original.find(t_name)
           #f_index = original.find(BUTTON)
           #original.replace(original[f_index:f_index+len(BUTTON)], SPAN)
-          print("end of post func")
           self.send_response(200)
           self.send_header('Content-type','text/html')
           self.end_headers()
@@ -429,4 +432,6 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
         return
 
 if __name__ == '__main__':
+    buffer = 1
+    sys.stderr = open("logfile_{ts}.txt".format(ts=time.strftime("%y%m%d_%H%M", time.localtime())), 'w', buffer)
     HTTPServer(('', 8008), CustomHTTPRequestHandler).serve_forever()
